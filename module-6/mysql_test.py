@@ -4,13 +4,19 @@
 import mysql.connector
 from mysql.connector import errorcode
 
+import dotenv
+from dotenv import dotenv_values
+
+secrets = dotenv_values(".env")
+
 config = {
-    "user": "movies_user",
-    "password": "popcorn",
-    "host": "127.0.0.1",
-    "database": "movies",
-    "raise_on_warnings": True  
+    "user": secrets["USER"],
+    "password": secrets["PASSWORD"],
+    "host": secrets["HOST"],
+    "database": secrets["DATABASE"],
+    "raise_on_warnings": secrets["RAISE_ON_WARNINGS"] == "True"  # Convert to boolean
 }
+
 
 try:
     db = mysql.connector.connect(**config)
