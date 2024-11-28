@@ -44,7 +44,7 @@ try:
     for genre_id, genre_name in cursor.fetchall():
         print(f"Genre ID: {genre_id}\nGenre Name: {genre_name}\n")
 
-    # Query 3 movie names with a runtime less than 2 hours
+    # Query 3 movie names with a runtime of less than 2 hours
     print("\n-- DISPLAYING Short Film RECORDS --")
     query3 = "SELECT film_name, film_runtime FROM film WHERE film_runtime < 120"
     cursor.execute(query3)
