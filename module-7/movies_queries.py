@@ -1,6 +1,10 @@
 # Alisa Steensen
 # Module 7.2
 
+# Make 4 queries, first and second query to select all the fields for the studio and genre tables
+# Third query to select the movie names for those movies that have a run time of less than two hours
+# Fourth query to get a list of film names, and directors grouped by director
+
 import mysql.connector
 from mysql.connector import errorcode
 
