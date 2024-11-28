@@ -53,11 +53,7 @@ try:
 
     # Query 4 film names and directors group by director
     print("\n-- DISPLAYING Director RECORDS in Order --")
-    query4 = """
-    SELECT film_name, film_director 
-    FROM film
-    ORDER BY film_director
-    """
+    query4 = "SELECT film_name, film_director FROM film ORDER BY film_director"
     cursor.execute(query4)
     for film_name, director_name in cursor.fetchall():
         print(f"Film Name: {film_name}\nDirector: {director_name}\n")
