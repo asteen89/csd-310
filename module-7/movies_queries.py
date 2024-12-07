@@ -31,7 +31,7 @@ try:
     input("\n\n Press any key to continue...")
 
      # Query 1 studio table
-    print("\n-- DISPLAYING Studio RECORDS --")
+    print("\n-- DISPLAYING  --")
     query1 = "SELECT * FROM studio"
     cursor.execute(query1)
     for studio_id, studio_name in cursor.fetchall():
