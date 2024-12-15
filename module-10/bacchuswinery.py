@@ -29,10 +29,10 @@ try:
 
     # Query 1 display Employee records
     print("\n-- DISPLAYING Employee RECORDS --")
-    query1 = "SELECT * FROM Employee"
+    query1 = "SELECT employee_id, name, role, department_id FROM Employee"
     cursor.execute(query1)
-    for employee_id, name, role, department_id, quarterly_hours_worked in cursor.fetchall():
-        print(f"Employee ID: {employee_id}\nName: {name}\nRole: {role}\nDepartment ID: {department_id}\nQuarterly Hours Worked: {quarterly_hours_worked}\n")
+    for employee_id, name, role, department_id in cursor.fetchall():
+        print(f"Employee ID: {employee_id}\nName: {name}\nRole: {role}\nDepartment ID: {department_id}\n")
 
     # Query 2 display Department records
     print("\n-- DISPLAYING Department RECORDS --")
